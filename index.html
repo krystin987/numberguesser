@@ -7,23 +7,22 @@
     <title>Number Guesser</title>
   </head>
   <body>
-    <header>Number Guesser</header>
+    <header id="top">
+      Number Guesser
+    </header>
+
       <input id="user-guess" type="number" placeholder="Enter here..."></input>
       <button id="user-guess-button">Guess</button>
       <button id="clear-button">Clear</button>
       <h2>Your last guess was</h2>
       <h1 id="user-input-display"></h1>
-      <h2>That is too 'blank'</h2>
+      <h2 class="guess-response"></h2>
       <button id="reset">Reset</button>
       <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
 
-<!--
-Display results and feedback:
-If their guess is too high, it should display: “That is too high”
-If their guess is too low, it should display: “That is too low”
-If the guess is correct, it should display: “BOOM!” -->
+
 
 <!-- The input field should only accept numerical entries, within the defined min and max range
 The application should display an error message if the guess is not a number (e.g. parseInt() returns NaN).
