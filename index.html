@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="utf-8">
+    <title>Number Guesser</title>
+  </head>
+  <body>
+    <header>Number Guesser</header>
+      <input id="user-guess" type="number" placeholder="Enter here..."></input>
+      <button id="user-guess-button">Guess</button>
+      <button id="clear-button">Clear</button>
+      <h2>Your last guess was</h2>
+      <h1 id="user-input-display"></h1>
+      <h2>That is too 'blank'</h2>
+      <button id="reset">Reset</button>
+      <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
+
+<!--
+Display results and feedback:
+If their guess is too high, it should display: “That is too high”
+If their guess is too low, it should display: “That is too low”
+If the guess is correct, it should display: “BOOM!” -->
+
+<!-- The input field should only accept numerical entries, within the defined min and max range
+The application should display an error message if the guess is not a number (e.g. parseInt() returns NaN).
+The application should display an error if the guess is outside of the range of possible answers.
+The clear button should be disabled if there is nothing to clear.
+The reset button should be disabled if there is nothing to reset. -->
