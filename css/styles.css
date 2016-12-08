@@ -25,43 +25,48 @@ span {
 }
 
 button {
+  margin: 5px;
   border-style: none;
+  border-radius: 25px;
+  height: 25px;
+  width: 200px;
 }
 
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #EB008B;
+}
 
 .space {
   margin-top: 20px;
 }
 
-.button-space {
-  margin-top: 10px;
+#user-input-display {
+  font-size: 200px;
+  color: #ED458B;
+
 }
 
 #user-guess {
+  margin: 5px;
   height: 25px;
   width: 200px;
 }
 
-#user-guess-button {
+/*#clear-button {
   border-radius: 25px;
   height: 25px;
   width: 200px;
-}
+}*/
 
-#user-guess-button:hover {
-  background-color: #EB008B;
-  border-radius: 25px;
-  height: 25px;
-  width: 200px;
-}
 
-#clear-button {
-  border-radius: 25px;
-  height: 25px;
-  width: 200px;
-}
-
-#user-input-display {
-  font-size: 40px;
-  color: #ED458B;
-}
+/*
+@media screen and (max-width: 350px) {
+  button{
+    margin: 5px 0;
+    width: 50%;
+  }
+}*/
