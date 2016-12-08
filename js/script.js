@@ -1,12 +1,23 @@
+
+// These are elements in the DOM
 var guess = document.getElementById('user-guess');
 var guessButton = document.getElementById('user-guess-button');
 var inputDisplay = document.getElementById('user-input-display');
 var response = document.getElementById('guess-response');
 var clearButton = document.getElementById('clear-button');
 var resetButton = document.getElementById('reset');
-var rng = Math.floor((Math.random() * 100))%100  + 1;
 var userMin = document.getElementById('user-min');
 var userMax = document.getElementById('user-max');
+
+Math.randBetween = function (min,max,asFloat){
+  var r = Math.random()*(max-min)+min;
+  // This is the terniary operator:
+  return asFloat ? r : Math.round(r);
+  // it reads "if asFloat, then r, else Math.round(r)
+}
+
+// This is an integer
+var randomValue = Math.randBetween(1, 100);
 
 guessButton.addEventListener('click', function () {
   onScreenGuess();
@@ -37,7 +48,7 @@ guess.addEventListener('keyup', function(){
 // })
 
 window.onload = function (){
-  console.log(rng);
+  console.log(randomValue);
   clearButton.disabled = true;
   resetButton.disabled = true;
 }
@@ -46,13 +57,13 @@ function onScreenGuess () {
   var display = guess.value;
   inputDisplay.innerText = display;
   var num = parseInt(guess.value);
-  if (num === rng) {
+  if (num === randomValue) {
     response.innerText = "BOOM!";
   } else if (num > 100 || num < 1){
     alert("Out of range! Please, pick a number between 1 and 100.");
-  } else if (num < rng) {
+  } else if (num < randomValue) {
     response.innerText = "That's too low!";
-  } else if (num > rng){
+  } else if (randomValue < num){
     response.innerText="That's too high!"
  }
 }
@@ -62,12 +73,6 @@ function clearField (){
   inputDisplay.innerText = clear;
   guess.value=clear;
 }
-
-// function randomNumber (){
-//   minimum = getMinimum;
-//   maximum = getMaximum;
-//   return Math.floor((Math.random() * (minimum * maximum)) + minimum;
-// }
 
 function getMinimum () {
   var min = userMin.value;
