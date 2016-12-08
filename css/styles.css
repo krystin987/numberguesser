@@ -1,19 +1,40 @@
+body {
+  color: 404041;
+  font-family: "Open Sans";
+  margin: auto;
+  text-align: center;
+}
+
 header {
   background-color: #404041;
+  font-size: 25px;
   color: #ED458B;
-  height: 100px;
-  font-family: "Open Sans";
-  font-weight: 700;
+  height: 50px;
+  display: block;
+  padding: 25px 0px 0px 25px;
 }
 
 header h3{
-  margin-bottom: 25px;
   text-align: center;
-  font-size: 100%;
+  font-weight: 700;
 }
 
 span {
   color: #E6E7E8;
+  font-weight: 300;
+}
+
+button {
+  border-style: none;
+}
+
+
+.space {
+  margin-top: 20px;
+}
+
+.button-space {
+  margin-top: 10px;
 }
 
 #user-guess {
@@ -22,6 +43,13 @@ span {
 }
 
 #user-guess-button {
+  border-radius: 25px;
+  height: 25px;
+  width: 200px;
+}
+
+#user-guess-button:hover {
+  background-color: #EB008B;
   border-radius: 25px;
   height: 25px;
   width: 200px;
