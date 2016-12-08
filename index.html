@@ -7,25 +7,31 @@
     <title>Number Guesser</title>
   </head>
   <body>
-    <header id="top">
-      Number Guesser
+    <header>
+      <h3>Number<span>Guesser</span></h3>
     </header>
 
-      <input id="user-guess" type="number" placeholder="Enter here..."></input>
-      <button id="user-guess-button">Guess</button>
+      <input id="user-guess" type="number" placeholder="Enter your guess"></input>
+      <br>
+      <button id="user-guess-button" >Guess</button>
+      <br>
       <button id="clear-button">Clear</button>
+      <br>
       <h2>Your last guess was</h2>
       <h1 id="user-input-display"></h1>
-      <h2 class="guess-response"></h2>
+      <h2 id="guess-response"></h2>
       <button id="reset">Reset</button>
+      <!-- <input id="user-min"></input>
+      <input id="user-max"></input> -->
+
       <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
 
-
-
-<!-- The input field should only accept numerical entries, within the defined min and max range
-The application should display an error message if the guess is not a number (e.g. parseInt() returns NaN).
-The application should display an error if the guess is outside of the range of possible answers.
-The clear button should be disabled if there is nothing to clear.
-The reset button should be disabled if there is nothing to reset. -->
+<!--
+Heading back/grey text: #404041
+Pink Title: #ED458B
+Grey Title: #E6E7E8
+Button Reg: #929497
+Button Disabled: #D0D2D3
+Button Hov/Big Num: #EB008B  -->
