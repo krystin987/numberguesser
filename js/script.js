@@ -10,31 +10,29 @@ var userMax = document.getElementById('user-max');
 
 guessButton.addEventListener('click', function () {
   onScreenGuess();
+  // console.log(userMin);
   });
 
 clearButton.addEventListener('click', function () {
   clearField();
-  guess.value = "";
-  inputDisplay.value = "";
   clearButton.disabled = true;
-
 });
 
 resetButton.addEventListener('click', function(){
   clearField();
+  randomNumber();
+  resetButton.disabled = true;  
 })
 
 guess.addEventListener('keyup', function(){
   if(guess.value === "") {
     clearButton.disabled = true;
+    resetButton.disabled = true;
   } else {
     clearButton.disabled = false;
+    resetButton.disabled = false;
   }
 });
-
-// resetButton.addEventListener('click', function(){
-//
-// })
 
 window.onload = function (){
   console.log(rng);
@@ -54,27 +52,38 @@ function onScreenGuess () {
     response.innerText = "That's too low!";
   } else if (num > rng){
     response.innerText="That's too high!"
- }
+ } else {
+}
 }
 
 function clearField (){
   var clear="";
   inputDisplay.innerText = clear;
   guess.value=clear;
+  userMin.value = clear;
+  userMax.value=clear;
 }
 
-// function randomNumber (){
-//   minimum = getMinimum;
-//   maximum = getMaximum;
-//   return Math.floor((Math.random() * (minimum * maximum)) + minimum;
-// }
+function randomNumber (){
+  minimum = getMinimum();
+  maximum = getMaximum();
+  return Math.floor(Math.random() * (minimum * maximum)) + minimum;
+}
 
 function getMinimum () {
   var min = userMin.value;
   var userNum = parseInt(userMin.value);
-  console.log('hi');
+  return userNum;
 }
 
 function getMaximum() {
-
+  var max = userMax.value;
+  var userNum = parseInt(userMax.value);
+  return userNum;
 }
+
+
+// junk from function randomNumber
+  // var inputMin = userMin.value;
+  // console.log(inputMin);
+  // userMin.innerText = inputMin;

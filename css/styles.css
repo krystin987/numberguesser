@@ -40,6 +40,12 @@ button:hover {
   background-color: #EB008B;
 }
 
+input {
+  margin: 5px;
+  height: 25px;
+  width: 200px;
+}
+
 .space {
   margin-top: 20px;
 }
@@ -50,11 +56,8 @@ button:hover {
 
 }
 
-#user-guess {
-  margin: 5px;
-  height: 25px;
-  width: 200px;
-}
+
+
 
 /*#clear-button {
   border-radius: 25px;
