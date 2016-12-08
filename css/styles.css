@@ -5,6 +5,7 @@ body {
   text-align: center;
 }
 
+/*header */
 header {
   background-color: #404041;
   font-size: 25px;
@@ -24,6 +25,7 @@ span {
   font-weight: 300;
 }
 
+/*btn styles*/
 button {
   margin: 5px;
   border-style: none;

@@ -7,11 +7,12 @@ var resetButton = document.getElementById('reset');
 var rng = Math.floor((Math.random() * 100))%100  + 1;
 var userMin = document.getElementById('user-min');
 var userMax = document.getElementById('user-max');
+var chooseButton = document.getElementById('choose');
 
 guessButton.addEventListener('click', function () {
   onScreenGuess();
   // console.log(userMin);
-  });
+});
 
 clearButton.addEventListener('click', function () {
   clearField();
@@ -20,9 +21,9 @@ clearButton.addEventListener('click', function () {
 
 resetButton.addEventListener('click', function(){
   clearField();
-  randomNumber();
-  resetButton.disabled = true;  
-})
+  // randomNumber();
+  resetButton.disabled = true;
+});
 
 guess.addEventListener('keyup', function(){
   if(guess.value === "") {
@@ -40,10 +41,17 @@ window.onload = function (){
   resetButton.disabled = true;
 }
 
+// chooseButton.addEventListener('click', function) {
+//   randomNumber=
+//   getMinimum
+//
+
 function onScreenGuess () {
   var display = guess.value;
-  inputDisplay.innerText = display;
   var num = parseInt(guess.value);
+
+  inputDisplay.innerText = display;
+
   if (num === rng) {
     response.innerText = "BOOM!";
   } else if (num > 100 || num < 1){
@@ -51,36 +59,40 @@ function onScreenGuess () {
   } else if (num < rng) {
     response.innerText = "That's too low!";
   } else if (num > rng){
-    response.innerText="That's too high!"
+    response.innerText="That's too high!";
  } else {
-}
+ }
 }
 
 function clearField (){
   var clear="";
   inputDisplay.innerText = clear;
   guess.value=clear;
-  userMin.value = clear;
-  userMax.value=clear;
+  // userMin.value = "";
+  // userMax.value="";
 }
 
-function randomNumber (){
-  minimum = getMinimum();
-  maximum = getMaximum();
-  return Math.floor(Math.random() * (minimum * maximum)) + minimum;
-}
+// function randomNumber (){
+//   // minimum = getMinimum();
+//   // maximum = getMaximum();
+//   // return Math.floor(Math.random() * (minimum * maximum)) + minimum;
+// }
 
-function getMinimum () {
-  var min = userMin.value;
-  var userNum = parseInt(userMin.value);
-  return userNum;
-}
+// function getMinimum () {
+//   if ((document.getElementById('user-min').value) === "") {
+//     return 1;
+//     console.log('this');
+//   } else {
+//     return Number(document.getElementById('user-min').value) }
+//     console.log('got it');
+//   }
 
-function getMaximum() {
-  var max = userMax.value;
-  var userNum = parseInt(userMax.value);
-  return userNum;
-}
+
+// function getMaximum() {
+//   var max = userMax.value;
+//   var userNum = parseInt(userMax.value);
+//   return userNum;
+
 
 
 // junk from function randomNumber
